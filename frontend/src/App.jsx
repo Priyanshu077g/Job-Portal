@@ -7,7 +7,9 @@ import PostDetails from "./pages/PostDetails"
 import Register from "./pages/Register"
 import Profile from "./pages/Profile"
 import {Route, Routes} from 'react-router-dom'
+import {disableReactevTools} from '@fvilers/disable-react-devtools'
 import { UserContext, UserContextProvider } from "./context/UserContext"
+if(process.env.NODE_ENV === 'production') disableReactevTools();
 const App = () => {
   return (
     
